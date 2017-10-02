@@ -1,0 +1,40 @@
+﻿@model IEnumerable<oxuAz.Models.news>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <h1>
+                @Html.DisplayNameFor(model => model.Heading)
+            </h1>
+                @foreach (var item in Model)
+                {
+                    <h2>
+                        @Html.DisplayFor(modelItem => item.Heading)
+                    </h2>
+                    <h3>
+                        @Html.DisplayFor(modelItem => item.Data)
+                    </h3>
+                    <h4>
+                        @Html.DisplayFor(modelItem => item.Text)
+                    </h4>
+                }
+        </div>
+        <div class="col-md-3">
+
+        </div>
+    </div>
+</div>
+
+
+
+
